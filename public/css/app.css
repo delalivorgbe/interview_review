@@ -1,0 +1,32 @@
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.col-centered{
+    margin: 0 auto;
+    float: none;
+}
+
+.text-centered{
+    text-align: center;
+}
+
+.horizontal-ul {
+    list-style-type: none;
+    margin-top: 40px;
+    margin-right: 32px;
+}
+
+.horizontal-li {
+    padding: 10px 10px;
+    display:inline;
+}

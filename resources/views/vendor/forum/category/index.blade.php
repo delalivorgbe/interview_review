@@ -1,6 +1,10 @@
 {{-- $category is passed as NULL to the master layout view to prevent it from showing in the breadcrumbs --}}
 @extends ('forum::master', ['category' => null])
 
+@section('menu')
+    @yield('themenu')
+@endsection
+
 @section ('content')
     @can ('createCategories')
         @include ('forum::category.partials.form-create')
