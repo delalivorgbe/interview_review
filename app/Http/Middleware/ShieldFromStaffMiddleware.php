@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Auth;
 
 class ShieldFromStaffMiddleware
 {
@@ -15,6 +16,10 @@ class ShieldFromStaffMiddleware
      */
     public function handle($request, Closure $next)
     {
+        if(Auth::user()->user_role == 'Staff'){
+            return redirect()->route('dashboard');
+        }
+
         return $next($request);
     }
 }

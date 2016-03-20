@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Auth;
 
 class UserRoleMiddleware
 {
@@ -15,6 +16,10 @@ class UserRoleMiddleware
      */
     public function handle($request, Closure $next)
     {
+        if(Auth::user()->user_role == null){
+            return redirect()->route('setup');
+        }
+
         return $next($request);
     }
 }

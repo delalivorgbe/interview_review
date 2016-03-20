@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateStudentsTable extends Migration
+class CreateFormRespondentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,8 +12,14 @@ class CreateStudentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('students', function (Blueprint $table) {
+        Schema::create('form_respondents', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->integer('user_id');
+            $table->integer('form_id');
+            $table->string('original_filename');
+            $table->string('doc_path');
+
             $table->timestamps();
         });
     }
@@ -25,6 +31,6 @@ class CreateStudentsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('students');
+        Schema::drop('form_respondents');
     }
 }

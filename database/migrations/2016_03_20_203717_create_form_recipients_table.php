@@ -14,6 +14,10 @@ class CreateFormRecipientsTable extends Migration
     {
         Schema::create('form_recipients', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->integer('form_id');
+            $table->string('demographic');
+
             $table->timestamps();
         });
     }

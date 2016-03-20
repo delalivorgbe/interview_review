@@ -3,6 +3,8 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Auth;
+
 
 class ShieldFromStudentMiddleware
 {
@@ -15,6 +17,11 @@ class ShieldFromStudentMiddleware
      */
     public function handle($request, Closure $next)
     {
+
+        if(Auth::user()->user_role == 'Student'){
+            return redirect()->route('sdocreq');
+        }
+
         return $next($request);
     }
 }
