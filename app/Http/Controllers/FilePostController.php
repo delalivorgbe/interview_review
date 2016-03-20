@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
-use Maatwebsite\Excel\Facades\Excel;
-use Chumper\Zipper\Facades\Zipper;
+//use Maatwebsite\Excel\Facades\Excel;
+//use Chumper\Zipper\Facades\Zipper;
 
 class FilePostController extends Controller
 {
@@ -36,29 +36,29 @@ class FilePostController extends Controller
 
 
     public function parseCsv(){
-        Excel::load('/storage/app/temp.csv', function($reader) {
-
-            $reader->each(function($newStudent) {
-
-                if (!($authUser = Student::where('student_id', (string)(int)$newStudent->student_id)->first())) {
-                    $student = new Student();
-                    $student->first_name = $newStudent->first_name;
-                    $student->last_name = $newStudent->last_name;
-                    $student->age = (int)$newStudent->age;
-                    $student->gender = $newStudent->gender;
-                    $student->country = $newStudent->country;
-                    $student->class = (int)$newStudent->class;
-                    $student->major = $newStudent->major;
-                    $student->student_id = (int)$newStudent->student_id;
-                    $student->email = $newStudent->email;
-                    $student->telephone = $newStudent->telephone;
-
-                    $student->save();
-                }
-
-            });
-
-        });
+//        Excel::load('/storage/app/temp.csv', function($reader) {
+//
+//            $reader->each(function($newStudent) {
+//
+//                if (!($authUser = Student::where('student_id', (string)(int)$newStudent->student_id)->first())) {
+//                    $student = new Student();
+//                    $student->first_name = $newStudent->first_name;
+//                    $student->last_name = $newStudent->last_name;
+//                    $student->age = (int)$newStudent->age;
+//                    $student->gender = $newStudent->gender;
+//                    $student->country = $newStudent->country;
+//                    $student->class = (int)$newStudent->class;
+//                    $student->major = $newStudent->major;
+//                    $student->student_id = (int)$newStudent->student_id;
+//                    $student->email = $newStudent->email;
+//                    $student->telephone = $newStudent->telephone;
+//
+//                    $student->save();
+//                }
+//
+//            });
+//
+//        });
     }
 
 
