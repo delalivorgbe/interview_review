@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFormRespondentsTable extends Migration
+class CreateStudentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,15 +12,22 @@ class CreateFormRespondentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('form_respondents', function (Blueprint $table) {
+        Schema::create('students', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->integer('user_id');
-            $table->integer('form_id');
-            $table->string('original_filename');
-            $table->string('doc_path');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->integer('age');
+            $table->string('gender');
+            $table->string('country');
+            $table->string('class');
+            $table->string('major');
+            $table->string('student_id')->unique();
+            $table->string('email');
+            $table->string('telephone');
 
             $table->timestamps();
+
         });
     }
 
@@ -31,6 +38,6 @@ class CreateFormRespondentsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('form_respondents');
+        Schema::drop('students');
     }
 }
