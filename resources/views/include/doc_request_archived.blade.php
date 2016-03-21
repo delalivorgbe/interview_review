@@ -8,11 +8,17 @@
 
             @if($form->status == 'ARCHIVED')
 
+                <?php $subs = 0?>
+
+                @foreach($counts as $count)
+                    <?php if($form->id == $count->form_id){$subs=$count->num_resps;} ?>
+                @endforeach
+
                 <div class="panel panel-warning">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" href="#collaps{{$form->id}}">{{ $form->title }}</a>
-                            <span class="pull-right">Submissions made: </span>
+                            <span class="pull-right">Submissions made: <?php echo $subs?> </span>
                         </h4>
                     </div>
 
@@ -25,7 +31,7 @@
 
                                 <h5><strong>Deadline: {{ $form->expiry_date->format('D jS M Y') }}</strong></h5>
 
-                                <h5><strong>Submissions made: 30</strong></h5>
+                                <h5><strong>Submissions made: <?php echo $subs?></strong></h5>
 
                             </div>
 
@@ -53,7 +59,13 @@
 
 
                                 <div class="row text-center">
-                                    <a href="{{ route('download.archive') }}" class="btn btn-success col-xs-12">
+                                    <a @if($subs != 0)
+                                       href="{{ route('download.archive') }}"
+                                       @else
+                                       data-toggle="tooltip" data-placement="bottom" title="Nothing to download"
+                                       @endif
+
+                                       class="btn btn-success col-xs-12">
                                         <span class="glyphicon glyphicon-download-alt pull-right"></span>
                                         <strong> Download as .zip</strong>
                                     </a>

@@ -76,12 +76,37 @@ class FormController extends Controller
 
         $forms = Form::orderBy('created_at', 'desc')->get();
 
-        return view('include.doc_request_active', ['forms' => $forms]);
+//        $counts = DB::table('form_respondents')
+//            ->leftJoin('form_respondents', 'forms.id', '=', 'form_respondents.form_id')
+//            ->select('form_respondents.form_id')->count()
+//            ->distinct()
+//            ->orderBy('created_at', 'desc')
+//            ->get();
+
+
+        $counts = DB::table('form_respondents')
+            ->select(DB::raw('count(form_respondents.form_id) as num_resps, forms.id as form_id '))
+            ->leftJoin('forms', 'form_respondents.form_id', '=', 'forms.id')
+            ->groupBy('forms.id')
+            ->get();
+
+//        dd($counts);
+
+
+        return view('include.doc_request_active', compact('forms','counts'));
     }
 
     public function getArchivedDocRequests(){
+
         $forms = Form::orderBy('created_at', 'desc')->get();
-        return view('include.doc_request_archived', ['forms' => $forms]);
+
+        $counts = DB::table('form_respondents')
+            ->select(DB::raw('count(form_respondents.form_id) as num_resps, forms.id as form_id '))
+            ->leftJoin('forms', 'form_respondents.form_id', '=', 'forms.id')
+            ->groupBy('forms.id')
+            ->get();
+
+        return view('include.doc_request_archived', compact('forms' , 'counts'));
     }
 
 

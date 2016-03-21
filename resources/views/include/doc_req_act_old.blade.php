@@ -3,6 +3,7 @@
     <h4>Active Document Requests</h4>
 
 
+
     <div class="panel-group">
 
         @foreach($forms as $form)
@@ -11,9 +12,9 @@
 
                 <?php $subs = 0?>
 
-                 @foreach($counts as $count)
-                        <?php if($form->id == $count->form_id){$subs=$count->num_resps;} ?>
-                 @endforeach
+                @foreach($counts as $count)
+                    <?php if($form->id == $count->form_id){$subs=$count->num_resps;} ?>
+                @endforeach
 
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -43,12 +44,6 @@
 
                                     @if(Auth::user() == $form->user)
                                         <ul class="horizontal-ul">
-
-                                            <li data-toggle="tooltip" data-placement="top" title="View Submissions" class="horizontal-li">
-                                                <a href="#"> <i class="fa fa-list"></i> </a>
-                                            </li>
-
-
                                             <li data-toggle="tooltip" data-placement="top" title="Edit request" class="horizontal-li">
                                                 <a href="#"> <i class="fa fa-edit"></i> </a>
                                             </li>
@@ -67,13 +62,7 @@
 
 
                                 <div class="row text-center">
-                                    <a @if($subs != 0)
-                                       href="{{ route('download.archive') }}"
-                                       @else
-                                       data-toggle="tooltip" data-placement="bottom" title="Nothing to download"
-                                       @endif
-
-                                        class="btn btn-success col-xs-12">
+                                    <a href="{{ route('download.archive') }}" class="btn btn-success col-xs-12">
                                         <span class="glyphicon glyphicon-download-alt pull-right"></span>
                                         <strong> Download as .zip</strong>
                                     </a>
