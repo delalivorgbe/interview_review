@@ -135,7 +135,7 @@ return [
     |
     */
 
-    'domain' => 'enigmatic-lake-58189.herokuapp.com/',
+    'domain' => 'http://enigmatic-lake-58189.herokuapp.com/',
 
     /*
     |--------------------------------------------------------------------------
@@ -148,6 +148,6 @@ return [
     |
     */
 
-    'secure' => false,
+    'secure' => true,
 
 ];
