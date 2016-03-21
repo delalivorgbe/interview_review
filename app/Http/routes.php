@@ -18,8 +18,6 @@ Route::resource('fileposts', 'StaffPagesController');
 
 
 
-Route::get('auth/{provider?}', 'SocialController@getSocialAuth');
-Route::get('auth/{provider?}/callback', 'SocialController@getSocialAuthCallback');
 
 
 /*
@@ -38,6 +36,11 @@ Route::group(['middleware' => ['web']], function () {
 //    Route::get('/', function () {
 //        return view('welcome');
 //    });
+
+
+    Route::get('auth/{provider?}', 'SocialController@getSocialAuth');
+    Route::get('auth/{provider?}/callback', 'SocialController@getSocialAuthCallback');
+    
 
 
     Route::get('/', [
