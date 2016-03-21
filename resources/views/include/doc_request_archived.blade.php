@@ -29,6 +29,10 @@
                                 <h4><strong>Instructions</strong></h4>
                                 <p>{{ $form->description }}</p>
 
+                                 <span class="col-md-12">
+                                     <hr class="col-md-9"> <br>
+                                </span>
+
                                 <h5><strong>Deadline: {{ $form->expiry_date->format('D jS M Y') }}</strong></h5>
 
                                 <h5><strong>Submissions made: <?php echo $subs?></strong></h5>

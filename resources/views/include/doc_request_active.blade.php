@@ -18,7 +18,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#collaps{{$form->id}}">{{ $form->title }}</a>
+                            <a data-toggle="collapse" href="#collaps{{$form->id}}" id="title{{$form->id}}">{{ $form->title }}</a>
                             <span class="pull-right"><strong> Submissions made:<?php echo $subs;?> </strong></span>
                         </h4>
                     </div>
@@ -29,7 +29,7 @@
                             <div class="container col-md-9">
 
                                 <h4><strong>Instructions</strong></h4>
-                                <p>{{ $form->description }}</p>
+                                <p id="desc{{$form->id}}" >{{ $form->description }}</p>
 
 
                                 <span class="col-md-12">
@@ -37,8 +37,7 @@
                                 </span>
 
 
-
-                                <h5><strong>Deadline: {{ $form->expiry_date->format('D jS M Y') }}</strong></h5>
+                                <h5><strong>Deadline:<span  id="dead{{$form->id}}"> {{ $form->expiry_date->format('D jS M Y') }} </span> </strong></h5>
 
                                 <h5><strong>Submissions made: <?php echo $subs;?></strong></h5>
 
@@ -126,28 +125,29 @@
                 <form action="#" method="post">
                     <div class="form-group">
                         <label for="title">Title</label>
-                        <input class="form-control" type="text" name="title" id="title"
-                               required>
+                        <input class="form-control" type="text" name="title" id="title" required>
                     </div>
 
                     <div class="form-group">
                         <label for="instructions">Instructions</label>
-                        <textarea class="form-control" name="instructions" id="instructions" rows="5" cols="1"></textarea>
+                        <textarea class="form-control" name="instructions" id="instructions" rows="5" cols="1" required></textarea>
                     </div>
 
                     <div class="row">
                         <div class="form-group col-md-6" >
                             <label for="expiry-date">Expiry Date</label>
-                            <input class="form-control" type="date" name="expiry-date" id="expiry-date">
+                            <input class="form-control" type="date" name="expiry-date" id="expiry-date" required>
                         </div>
 
 
                         <div class="form-group col-md-6" >
                             <label for="file-format">Fle Format</label>
                             <select class="form-control" name="file-format" id="file-format">
+                                <option value="any">any</option>
+                                <option value="image">image</option>
                                 <option value="pdf">pdf</option>
-                                <option value="png">png</option>
-                                <option value="jpg">jpg</option>
+                                <option value="doc">doc</option>
+                                <option value="spreadsheet">spreadsheet</option>
                             </select>
                         </div>
 
@@ -218,7 +218,7 @@
             method: 'POST',
             url: url,
             data: { title: $('#title').val(),
-                instructions: $('#instructions').val(),
+                instruction: $('#instructions').val(),
                 expirydate: $('#expiry-date').val(),
                 fileformat: $('#file-format').val(),
                 formId: $('#form-id').val(),
@@ -226,7 +226,12 @@
             }
         })
           .done(function (msg){
-              console.log(msg['message']);
+//              console.log(JSON.stringify(msg));
+              var formId = $('#form-id').val();
+              document.getElementById("title"+formId).innerHTML = msg['new_title'];
+              document.getElementById("desc"+formId).innerHTML = msg['new_desc'];
+              document.getElementById("dead"+formId).innerHTML = msg['new_date'];
+              $('#edit-doc-request-modal').modal('hide');
           });
     });
 </script>

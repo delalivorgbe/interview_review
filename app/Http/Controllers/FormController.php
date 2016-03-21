@@ -121,6 +121,28 @@ class FormController extends Controller
         return redirect()->route('forms')->with(['message' => 'Form deleted']);
     }
 
+    public function getEditRequest(Request $request){
+
+        $this->validate($request, [
+            'title' => 'required',
+            'instruction' => 'required',
+            'expirydate' => 'required'
+        ]);
+
+        $form = Form::find($request['formId']);
+        $form->title = $request['title'];
+        $form->description = $request['instruction'];
+        $form->format = $request['fileformat'];
+        $form->expiry_date = $request['expirydate'];
+        $form->update();
+
+        return response()->json(
+            ['new_title' => $form->title,
+                'new_desc' => $form->description,
+                'new_date' => $form->expiry_date->format(' D jS Y'),],
+            200);
+
+    }
 
     public function getArchiveForm($form_id){
 
