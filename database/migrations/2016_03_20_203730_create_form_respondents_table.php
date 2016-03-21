@@ -14,6 +14,12 @@ class CreateFormRespondentsTable extends Migration
     {
         Schema::create('form_respondents', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->integer('user_id');
+            $table->integer('form_id');
+            $table->string('original_filename');
+            $table->string('doc_path');
+
             $table->timestamps();
         });
     }

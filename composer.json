@@ -10,7 +10,8 @@
         "laravel/socialite": "^2.0",
         "riari/laravel-forum": "~3.0",
         "riari/laravel-forum-frontend": "~1.0",
-        "league/csv": "^8.0"
+        "league/csv": "^8.0",
+        "chumper/zipper": "0.6.x"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

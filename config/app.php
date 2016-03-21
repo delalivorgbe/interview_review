@@ -162,6 +162,7 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
         Riari\Forum\ForumServiceProvider::class,
         Riari\Forum\Frontend\ForumFrontendServiceProvider::class,
+        Chumper\Zipper\ZipperServiceProvider::class,
 
 
     ],
@@ -210,6 +211,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Zipper' => Chumper\Zipper\Zipper::class,
 
     ],
 

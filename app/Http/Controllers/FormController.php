@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Form;
+use App\FormRespondent;
 use App\Student;
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -74,6 +75,7 @@ class FormController extends Controller
     public function getActiveDocRequests(){
 
         $forms = Form::orderBy('created_at', 'desc')->get();
+
         return view('include.doc_request_active', ['forms' => $forms]);
     }
 
@@ -81,7 +83,6 @@ class FormController extends Controller
         $forms = Form::orderBy('created_at', 'desc')->get();
         return view('include.doc_request_archived', ['forms' => $forms]);
     }
-
 
 
     public function getDeleteForm($form_id){

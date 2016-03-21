@@ -12,7 +12,7 @@
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" href="#collaps{{$form->id}}">{{ $form->title }}</a>
-                            <span class="pull-right">Recipient Groups: 2014, CS </span>
+                            <span class="pull-right">Submissions made: </span>
                         </h4>
                     </div>
 
@@ -54,7 +54,7 @@
 
                                 <div class="row text-center">
                                     <a href="{{ route('download.archive') }}" class="btn btn-success col-xs-12">
-                                        <span class="glyphicon glyphicon-earphone pull-right"></span>
+                                        <span class="glyphicon glyphicon-download-alt pull-right"></span>
                                         <strong> Download as .zip</strong>
                                     </a>
                                 </div>

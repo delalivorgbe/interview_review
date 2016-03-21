@@ -55,7 +55,7 @@ class StudentPagesController extends Controller
 
     public function getStudentActiveDocRequests(){
 
-        $formResponses = FormRespondent::orderBy('user_id',Auth::user()->id)->get();
+//        $formResponses = FormRespondent::orderBy('user_id',Auth::user()->id)->get();
 
 //        $forms = DB::table('form_respondents')
 //            ->rightJoin('forms', 'forms.id', '=', 'form_respondents.form_id')
@@ -72,7 +72,7 @@ class StudentPagesController extends Controller
             })
             ->get();
 
-//        $forms = Form::orderBy('created_at', 'desc')->get();
+        //$forms = Form::orderBy('created_at', 'desc')->get();
         return view('include.students.student-doc-req-active', ['forms' => $forms]);
     }
 

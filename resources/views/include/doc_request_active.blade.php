@@ -12,7 +12,7 @@
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" href="#collaps{{$form->id}}">{{ $form->title }}</a>
-                            <span class="pull-right">Recipient Groups: 2014, CS </span>
+                            <span class="pull-right">Submissions made:  </span>
                         </h4>
                     </div>
 
@@ -28,6 +28,7 @@
                                 <h5><strong>Submissions made: 30</strong></h5>
 
                             </div>
+
 
                             <div class="container col-md-3">
 

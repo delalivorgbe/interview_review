@@ -8,8 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
-//use Maatwebsite\Excel\Facades\Excel;
-//use Chumper\Zipper\Facades\Zipper;
+use Chumper\Zipper\Facades\Zipper;
 use League\Csv\Reader;
 use Illuminate\Support\Facades\DB;
 
@@ -61,33 +60,6 @@ class FilePostController extends Controller
             return true; //if the function return false then the iteration will stop
         });
 
-
-
-
-
-//        Excel::load('/storage/app/temp.csv', function($reader) {
-//
-//            $reader->each(function($newStudent) {
-//
-//                if (!($authUser = Student::where('student_id', (string)(int)$newStudent->student_id)->first())) {
-//                    $student = new Student();
-//                    $student->first_name = $newStudent->first_name;
-//                    $student->last_name = $newStudent->last_name;
-//                    $student->age = (int)$newStudent->age;
-//                    $student->gender = $newStudent->gender;
-//                    $student->country = $newStudent->country;
-//                    $student->class = (int)$newStudent->class;
-//                    $student->major = $newStudent->major;
-//                    $student->student_id = (int)$newStudent->student_id;
-//                    $student->email = $newStudent->email;
-//                    $student->telephone = $newStudent->telephone;
-//
-//                    $student->save();
-//                }
-//
-//            });
-//
-//        });
     }
 
 
@@ -98,7 +70,7 @@ class FilePostController extends Controller
 //        $files = glob('/storage/app/f9/*');
         Zipper::make('test.zip')->add($files);
 
-        return response()->download($this->getUploadFile('/temp.csv'));
+        return response()->download($this->getUploadFile('temp.zip'));
 
 //        return redirect()->back();
     }
