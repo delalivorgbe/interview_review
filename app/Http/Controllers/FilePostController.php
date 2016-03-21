@@ -33,7 +33,7 @@ class FilePostController extends Controller
 
     public function getUploadFile($filename){
         $file = Storage::disk('local')->getDriver()->getAdapter()->getPathPrefix();
-        return $file."/".$filename;
+        return $file."".$filename;
     }
 
 
@@ -65,12 +65,23 @@ class FilePostController extends Controller
 
     public function downloadZipArchive(){
 
-        $files = glob($this->getUploadFile('/f9'));
+//        $files = glob($this->getUploadFile('/f1'));
+//
+////        $files = glob('/storage/app/f1/*');
+//        Zipper::make('test.zip')->add($files);
 
-//        $files = glob('/storage/app/f9/*');
-        Zipper::make('test.zip')->add($files);
+//        $files = glob('storage/app/fi/*');
+//        Zipper::make('public/test.zip')->add($files);
 
-        return response()->download($this->getUploadFile('temp.zip'));
+
+//        Zipper::make('public/test.zip')->add($this->getUploadFile('download'));
+//
+
+        $zipper = new \Chumper\Zipper\Zipper;
+        $zipper->make(storage_path('app/public/test.zip'))->folder('test')->add($this->getUploadFile('download') );
+
+//        dd(Storage::disk('public')->exists('test.zip'));
+        return response()->download(storage_path('app/public/test.zip'));
 
 //        return redirect()->back();
     }

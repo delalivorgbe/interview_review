@@ -1,4 +1,3 @@
-
 @extends('layouts.admin_template')
 
 @section('page_title')
@@ -7,6 +6,7 @@
 
 @section('css')
     <link href="{{asset('/css/app.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
 @endsection
 
 @section('page_header')

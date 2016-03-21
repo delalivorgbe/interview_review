@@ -52,7 +52,7 @@
                                         <ul class="horizontal-ul">
 
                                             <li data-toggle="tooltip" data-placement="top" title="View Submissions" class="horizontal-li">
-                                                <a href="#"> <i class="fa fa-list"></i> </a>
+                                                <a data-toggle="modal" href="#myModal"> <i class="fa fa-list"></i> </a>
                                             </li>
 
 
@@ -113,6 +113,54 @@
 </div>
 
 
+
+
+
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+
+
+                <table id="student_table" class="table table-striped table-sm">
+                    <thead class="thead-default">
+                    <tr>
+                        <th>#</th>
+                        <th>Student Name</th>
+                        <th>File</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    @foreach($forms as $form)
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th><a href="#">delalivorgbe.png </a></th>
+                        </tr>
+
+                    @endforeach
+
+                    </tbody>
+                </table>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
 <div class="modal fade" tabindex="-1" role="dialog" id="edit-doc-request-modal">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -142,7 +190,7 @@
 
                         <div class="form-group col-md-6" >
                             <label for="file-format">Fle Format</label>
-                            <select class="form-control" name="file-format" id="file-format">
+                            <select class="form-control" name="file-format" id="file-format" required>
                                 <option value="any">any</option>
                                 <option value="image">image</option>
                                 <option value="pdf">pdf</option>
@@ -175,21 +223,6 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-
-{{--<script  type="text/javascript">--}}
-    {{--$('.edit_doc_request_button').find('.edit').on('click', function(event){--}}
-
-        {{--event.preventDefault();--}}
-
-        {{--var reqTitle = event.target.parentNode.parentNode.parentNode.parentNode.parentNode.--}}
-                {{--parentNode.parentNode.childNodes[1].childNodes[0].nextElementSibling.nextElementSibling.textContent;--}}
-
-        {{--console.log(reqTitle);--}}
-
-
-        {{--$('#edit-doc-request-modal').modal();--}}
-    {{--});--}}
-{{--</script>ent--}}
 
 
 <script type="text/javascript">
@@ -239,6 +272,21 @@
 <script>
     var token = '{{ Session::token() }}';
     var url = '{{ route('edit') }}';
+</script>
+
+<script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(function () {
+        $('#student_table').dataTable({
+            "bPaginate": true,
+            "bLengthChange": true,
+            "bFilter": true,
+            "bSort": true,
+            "bInfo": true,
+            "bAutoWidth": false
+        });
+    });
 </script>
 
 
