@@ -17,6 +17,11 @@
 Route::resource('fileposts', 'StaffPagesController');
 
 
+
+Route::get('auth/{provider?}', 'SocialController@getSocialAuth');
+Route::get('auth/{provider?}/callback', 'SocialController@getSocialAuthCallback');
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -40,9 +45,10 @@ Route::group(['middleware' => ['web']], function () {
         'as' => 'home'
     ]);
 
-
-    Route::get('auth/{provider?}', 'SocialController@getSocialAuth');
-    Route::get('auth/{provider?}/callback', 'SocialController@getSocialAuthCallback');
+    Route::get('/login', [
+        'uses' => 'SocialController@goToHome',
+        'as' => 'login'
+    ]);
 
 
 
