@@ -164,7 +164,6 @@ return [
         Riari\Forum\Frontend\ForumFrontendServiceProvider::class,
 
 
-
     ],
 
     /*

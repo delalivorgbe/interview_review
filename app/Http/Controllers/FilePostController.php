@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 //use Maatwebsite\Excel\Facades\Excel;
 //use Chumper\Zipper\Facades\Zipper;
+use League\Csv\Reader;
+use Illuminate\Support\Facades\DB;
+
 
 class FilePostController extends Controller
 {
@@ -30,12 +33,38 @@ class FilePostController extends Controller
 
 
     public function getUploadFile($filename){
-        $file = Storage::disk('local')->get($filename);
-        return $file;
+        $file = Storage::disk('local')->getDriver()->getAdapter()->getPathPrefix();
+        return $file."/".$filename;
     }
 
 
     public function parseCsv(){
+
+        $csv = Reader::createFromPath($this->getUploadFile('temp.csv'));
+        $csv->setOffset(1); //because we don't want to insert the header
+
+        $nbInsert = $csv->each(function ($row) {
+
+            DB::table('students')->insert(array(
+                'first_name' => $row[0],
+                'last_name' => $row[1],
+                'age' => $row[2],
+                'gender' => $row[3],
+                'country' => $row[4],
+                'class' => $row[5],
+                'major' => $row[6],
+                'student_id' => $row[7],
+                'email' => $row[8],
+                'telephone' => $row[9],
+            ));
+
+            return true; //if the function return false then the iteration will stop
+        });
+
+
+
+
+
 //        Excel::load('/storage/app/temp.csv', function($reader) {
 //
 //            $reader->each(function($newStudent) {
