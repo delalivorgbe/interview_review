@@ -107,6 +107,12 @@ Route::group(['middleware' => ['web']], function () {
 
     //Document Request Routes
 
+    Route::get('/reqzip/{formId}', [
+        'uses' => 'FilePostController@downloadZipArchive',
+        'as' => 'download.files'
+    ]);
+
+
     Route::post('/createdocreq', [
         'uses' => 'FormController@formCreateForm',
         'as' => 'doc.request'
@@ -127,7 +133,7 @@ Route::group(['middleware' => ['web']], function () {
     ]);
 
 
-    Route::get('/archdownload', [
+    Route::get('/archdownload/{formId}', [
         'uses' => 'FilePostController@downloadZipArchive',
         'as' => 'download.archive'
     ]);

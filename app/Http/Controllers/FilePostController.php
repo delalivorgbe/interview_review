@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\File;
 use Chumper\Zipper\Facades\Zipper;
 use League\Csv\Reader;
 use Illuminate\Support\Facades\DB;
+use App\Form;
 
 
 class FilePostController extends Controller
@@ -63,27 +64,26 @@ class FilePostController extends Controller
     }
 
 
-    public function downloadZipArchive(){
-
-//        $files = glob($this->getUploadFile('/f1'));
-//
-////        $files = glob('/storage/app/f1/*');
-//        Zipper::make('test.zip')->add($files);
-
-//        $files = glob('storage/app/fi/*');
-//        Zipper::make('public/test.zip')->add($files);
+    public function downloadZipArchive($formId){
 
 
-//        Zipper::make('public/test.zip')->add($this->getUploadFile('download'));
-//
+//        Storage::delete(storage_path('app/public/test.zip'));
+
+        $form = Form::where('id', $formId)->first();
+
+        $sFormId = strval ($formId);
+        $folderName = 'f'.''.$sFormId;
+
+        $innerFolderName = strval($form->title).''.$sFormId;
+        $innerFolderName = preg_replace('/\s+/', '', $innerFolderName);
+
+        $downloadName = strval($form->title).''.$sFormId.'.zip';
+        $downloadName = preg_replace('/\s+/', '', $downloadName);
 
         $zipper = new \Chumper\Zipper\Zipper;
-        $zipper->make(storage_path('app/public/test.zip'))->folder('test')->add($this->getUploadFile('download') );
+        $zipper->make(storage_path('app/public/test.zip'))->folder('test')->add($this->getUploadFile('f1') );
 
-//        dd(Storage::disk('public')->exists('test.zip'));
         return response()->download(storage_path('app/public/test.zip'));
-
-//        return redirect()->back();
     }
 
 }

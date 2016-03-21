@@ -85,7 +85,7 @@
 
                                 <div class="row text-center">
                                     <a @if($subs != 0)
-                                       href="{{ route('download.archive') }}"
+                                       href="{{ route('download.archive', ['form_id' => $form->id]) }}"
                                        @else
                                        data-toggle="tooltip" data-placement="bottom" title="Nothing to download"
                                        @endif
