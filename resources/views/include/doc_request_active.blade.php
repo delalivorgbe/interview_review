@@ -54,7 +54,7 @@
 
                                 <div class="row text-center">
                                     <a href="{{ route('download.archive') }}" class="btn btn-success col-xs-12">
-                                        <span class="glyphicon glyphicon-earphone pull-right"></span>
+                                        <span class="glyphicon glyphicon-download-alt pull-right"></span>
                                         <strong> Download as .zip</strong>
                                     </a>
                                 </div>

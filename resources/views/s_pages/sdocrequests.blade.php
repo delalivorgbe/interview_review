@@ -33,7 +33,7 @@
 
         <div class="col-lg-12">
             <ul class="nav nav-tabs tabs-up" id="friends">
-                <li><a  href="{{ url('studactivedocreq') }}" data-target="#contacts" class="media_node active span"
+                <li><a  href="{{ route('students.requests.active') }}" data-target="#contacts" class="media_node active span"
                         id="contacts_tab" data-toggle="tabajax" rel="tooltip"> Active Doc. Requests </a></li>
                 <li><a href="{{ url('studsubmitteddocreq') }}" data-target="#friends_list" class="media_node span"
                        id="friends_list_tab" data-toggle="tabajax" rel="tooltip"> Submitted Docs</a></li>

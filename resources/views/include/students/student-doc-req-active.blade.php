@@ -5,6 +5,7 @@
     <div class="panel-group">
 
         @foreach($forms as $form)
+
             @if($form->status == 'ACTIVE')
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -52,6 +53,7 @@
                     </div>
                 </div>
             @endif
+
         @endforeach
 
 
