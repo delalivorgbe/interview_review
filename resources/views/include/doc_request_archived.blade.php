@@ -41,6 +41,11 @@
 
                                     @if(Auth::user() == $form->user)
                                         <ul class="horizontal-ul">
+
+                                            <li data-toggle="tooltip" data-placement="top" title="View Submissions" class="horizontal-li">
+                                                <a href="#"> <i class="fa fa-list"></i> </a>
+                                            </li>
+
                                             <li data-toggle="tooltip" data-placement="top" title="Edit request" class="horizontal-li">
                                                 <a href="#"> <i class="fa fa-edit"></i> </a>
                                             </li>

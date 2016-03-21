@@ -165,6 +165,11 @@ Route::group(['middleware' => ['web']], function () {
         'as' => 'requests.archived'
     ]);
 
+    Route::post('/editdocreq', function(\Illuminate\Http\Request $request){
+        return response()->json(['message' => $request['formId']
+      ]);
+    })->name('edit');
+
 
     //End Document Request Routes
 

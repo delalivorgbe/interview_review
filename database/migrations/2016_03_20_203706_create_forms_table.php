@@ -20,7 +20,7 @@ class CreateFormsTable extends Migration
             $table->integer('user_id');
             $table->string('format');
             $table->string('status')->default('ACTIVE');
-            $table->dateTime('expiry_date');
+            $table->date('expiry_date');
 
             $table->timestamps();
         });

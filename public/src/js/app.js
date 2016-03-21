@@ -2,6 +2,11 @@ $('.new_doc_request_button').find('button').on('click', function(){
     $('#doc-request-modal').modal();
 });
 
+$('.edit_doc_request_button').find('a').on('click', function(){
+    //$('#edit-doc-request-modal').modal();
+    console.log('works');
+});
+
 $('#modal-save').on('click', function(){
     $.ajax({
         method: 'POST',
@@ -37,3 +42,6 @@ $('[data-toggle="tabajax"]').click(function(e) {
     $this.tab('show');
     return false;
 });
+
+
+
