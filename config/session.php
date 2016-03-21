@@ -135,7 +135,7 @@ return [
     |
     */
 
-    'domain' => 'enigmatic-lake-58189.herokuapp.com/',
+    'domain' => 'enigmatic-lake-58189.herokuapp.com',
 
     /*
     |--------------------------------------------------------------------------

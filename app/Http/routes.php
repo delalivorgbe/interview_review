@@ -19,7 +19,6 @@ Route::resource('fileposts', 'StaffPagesController');
 
 
 
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -40,7 +39,7 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('auth/{provider?}', 'SocialController@getSocialAuth');
     Route::get('auth/{provider?}/callback', 'SocialController@getSocialAuthCallback');
-    
+
 
 
     Route::get('/', [

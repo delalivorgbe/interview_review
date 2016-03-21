@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f5f40db3-d86e-4b66-9eae-f84b99307029" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/session.php" afterPath="$PROJECT_DIR$/config/session.php" />
     </list>
     <ignored path="alu_dev.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,21 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="session.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="session.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/session.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.958333">
-              <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.47284344">
+              <caret line="137" column="51" selection-start-line="137" selection-start-column="51" selection-end-line="137" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -54,41 +45,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="b546decfbf00144dfc3ff8465727232b441b8297" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storage/framework/sessions/b546decfbf00144dfc3ff8465727232b441b8297">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="d6f40a9abcde8a1bbe85d6ff97475ca62afa3973" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storage/framework/sessions/d6f40a9abcde8a1bbe85d6ff97475ca62afa3973">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7907348">
-              <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+            <state vertical-scroll-proportion="1.875">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="49914bb37debd6c31ed6e0672accbff1ff1fabc5" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storage/framework/sessions/49914bb37debd6c31ed6e0672accbff1ff1fabc5">
+      <file leaf-file-name="services.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/services.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-17.958334">
+              <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -175,8 +146,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SocialController.php" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/config/session.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/config/session.php" />
       </list>
     </option>
   </component>
@@ -247,7 +218,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="rou&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/routes.php&#10;sess&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/config/session.php&#10;env&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/.env&#10;servic&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/config/services.php&#10;soci&#9;null&#9;null&#10;data&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/config/database.php&#10;sessi&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/config/session.php&#10;.env&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/.env&#10;databa&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/config/database.php&#10;File&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/FilePostController.php&#10;Form&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/FormController.php&#10;Student&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/StudentPagesController.php&#10;active&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/include/doc_request_active.blade.php&#10;for&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/pages/forms.blade.php&#10;student&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/pages/students.blade.php&#10;route&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/routes.php&#10;files&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/config/filesystems.php&#10;Fil&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/FilePostController.php&#10;FormCo&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/FormController.php&#10;doc&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/include/doc_request_active.blade.php&#10;stude&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/pages/students.blade.php&#10;COntr&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/FilePostController.php&#10;Controller&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/FormController.php&#10;src/js/a&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/public/src/js/app.js&#10;fo&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/pages/forms.blade.php&#10;app.js&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/public/src/js/app.js&#10;app&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/config/app.php&#10;forms&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/pages/forms.blade.php&#10;stud&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/StudentPagesController.php&#10;Stude&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/StudentPagesController.php&#10;compo&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/composer.json&#10;rout&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/routes.php&#10;Contr&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/FilePostController.php&#10;Staff&#9;null&#9;null&#10;Stud&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/StudentPagesController.php&#10;do&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/include/doc_request_active.blade.php&#10;docre&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/include/students/student-doc-req-active.blade.php&#10;front&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/config/forum.frontend.php&#10;fron&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/vendor/riari/laravel-forum-frontend/config/frontend.php&#10;lt&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/include/lte_header.blade.php&#10;ro&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/routes.php&#10;composer.js&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/composer.json&#10;routes&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/routes.php&#10;fronte&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/vendor/riari/laravel-forum-frontend/config/frontend.php&#10;master.b&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/vendor/riari/laravel-forum-frontend/views/master.blade.php&#10;service&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/config/services.php&#10;composer&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/composer.json" />
+    <property name="SearchEverywhereHistoryKey" value="env&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/.env&#10;ser&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/config/services.php&#10;rou&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/routes.php&#10;sess&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/config/session.php&#10;servic&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/config/services.php&#10;soci&#9;null&#9;null&#10;data&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/config/database.php&#10;sessi&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/config/session.php&#10;.env&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/.env&#10;databa&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/config/database.php&#10;File&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/FilePostController.php&#10;Form&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/FormController.php&#10;Student&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/StudentPagesController.php&#10;active&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/include/doc_request_active.blade.php&#10;for&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/pages/forms.blade.php&#10;student&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/pages/students.blade.php&#10;route&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/routes.php&#10;files&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/config/filesystems.php&#10;Fil&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/FilePostController.php&#10;FormCo&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/FormController.php&#10;doc&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/include/doc_request_active.blade.php&#10;stude&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/pages/students.blade.php&#10;COntr&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/FilePostController.php&#10;Controller&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/FormController.php&#10;src/js/a&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/public/src/js/app.js&#10;fo&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/pages/forms.blade.php&#10;app.js&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/public/src/js/app.js&#10;app&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/config/app.php&#10;forms&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/pages/forms.blade.php&#10;stud&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/StudentPagesController.php&#10;Stude&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/StudentPagesController.php&#10;compo&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/composer.json&#10;rout&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/routes.php&#10;Contr&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/FilePostController.php&#10;Staff&#9;null&#9;null&#10;Stud&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/Controllers/StudentPagesController.php&#10;do&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/include/doc_request_active.blade.php&#10;docre&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/include/students/student-doc-req-active.blade.php&#10;front&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/config/forum.frontend.php&#10;fron&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/vendor/riari/laravel-forum-frontend/config/frontend.php&#10;lt&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/resources/views/include/lte_header.blade.php&#10;ro&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/routes.php&#10;composer.js&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/composer.json&#10;routes&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/app/Http/routes.php&#10;fronte&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/vendor/riari/laravel-forum-frontend/config/frontend.php&#10;master.b&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/vendor/riari/laravel-forum-frontend/views/master.blade.php&#10;service&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/config/services.php&#10;composer&#9;FILE&#9;file:///Users/delali/Documents/laraspace/alu_dev/composer.json" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
@@ -302,7 +273,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.421875" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19453125" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -622,7 +593,7 @@
         <state vertical-scroll-proportion="-13.583333">
           <caret line="76" column="18" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
           <folding>
-            <element signature="e#40#56#0#PHP" expanded="true" />
+            <element signature="e#40#56#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -659,22 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.1666665">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storage/framework/views/3f530eea0191715ca27b13e4d9cd68610a6a0273.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.25">
@@ -691,10 +646,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/session.php">
+    <entry file="file://$PROJECT_DIR$/storage/framework/sessions/30007490a0e0313eaf95ee5e113e8aa6e39033a8">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.958333">
-          <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/sessions/d6f40a9abcde8a1bbe85d6ff97475ca62afa3973">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/sessions/b546decfbf00144dfc3ff8465727232b441b8297">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -715,34 +686,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage/framework/sessions/30007490a0e0313eaf95ee5e113e8aa6e39033a8">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/framework/sessions/b546decfbf00144dfc3ff8465727232b441b8297">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/framework/sessions/d6f40a9abcde8a1bbe85d6ff97475ca62afa3973">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7907348">
-          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+        <state vertical-scroll-proportion="1.875">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.958334">
+          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5769231">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47284344">
+          <caret line="137" column="51" selection-start-line="137" selection-start-column="51" selection-end-line="137" selection-end-column="51" />
           <folding />
         </state>
       </provider>
