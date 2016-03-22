@@ -18,7 +18,6 @@ Route::resource('fileposts', 'StaffPagesController');
 
 
 
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -37,9 +36,21 @@ Route::group(['middleware' => ['web']], function () {
 //    });
 
 
+    /*
+     ********************************************************************************
+     * oauth routes
+     * *******************************************************************************
+     */
     Route::get('auth/{provider?}', 'SocialController@getSocialAuth');
     Route::get('auth/{provider?}/callback', 'SocialController@getSocialAuthCallback');
 
+
+
+    /*
+    ********************************************************************************
+    * Socialite 3rd party login routes
+    * *******************************************************************************
+    */
 
 
     Route::get('/', [
@@ -53,7 +64,6 @@ Route::group(['middleware' => ['web']], function () {
     ]);
 
 
-
     Route::get('/logout', [
         'uses' => 'SocialController@getLogout',
         'as' => 'logout'
@@ -61,8 +71,12 @@ Route::group(['middleware' => ['web']], function () {
 
 
     /*
+     * *******************************************************************************
      * Faculty & staff routes
+     * *******************************************************************************
      */
+
+    //Navigation Routes
 
     Route::get('/setup', [
         'uses' => 'SocialController@getSetup',
@@ -191,7 +205,6 @@ Route::group(['middleware' => ['web']], function () {
     ]);
 
 
-
     //End Document Request Routes
 
 
@@ -202,8 +215,15 @@ Route::group(['middleware' => ['web']], function () {
 
 
 
+
+
+
+
+
     /*
+     * *******************************************************************************
      * Student routes
+     * *******************************************************************************
      */
 
     Route::get('/sdocreq', [
@@ -242,8 +262,16 @@ Route::group(['middleware' => ['web']], function () {
     ]);
 
     /*
-    * Student routes
+     ********************************************************************************
+    * End Student routes
+     ********************************************************************************
     */
+
+
+
+
+
+
 
     Route::get('admin', function () {
         return view('layouts.admin_template');

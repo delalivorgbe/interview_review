@@ -32,11 +32,6 @@
                             </div>
 
 
-
-
-
-
-
                             <div class="container col-md-3">
 
                                 <div class="row text-center">

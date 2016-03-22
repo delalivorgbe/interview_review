@@ -13,7 +13,7 @@
                     <?php if($form->id == $count->form_id){$subs=$count->num_resps;} ?>
                 @endforeach
 
-         @yield('panel_attr')nel-default">
+                 @yield('panel_attr')
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" href="#collaps{{$form->id}}">{{ $form->title }}</a>

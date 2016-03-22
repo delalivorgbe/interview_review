@@ -2,7 +2,6 @@
 
     <h4>Active Document Requests</h4>
 
-
     <div class="panel-group">
 
         @foreach($forms as $form)
@@ -15,6 +14,7 @@
                         <?php if($form->id == $count->form_id){$subs=$count->num_resps;} ?>
                  @endforeach
 
+
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -22,6 +22,7 @@
                             <span class="pull-right"><strong> Submissions made:<?php echo $subs;?> </strong></span>
                         </h4>
                     </div>
+
 
                     <div id="collaps{{$form->id}}" class="panel-collapse collapse">
                         <div class="panel-body">
@@ -111,7 +112,6 @@
     </div>
 
 </div>
-
 
 
 
@@ -245,6 +245,8 @@
 </script>
 
 
+
+
 <script type="text/javascript">
     $('#modal-save').on('click', function(){
         $.ajax({
@@ -269,10 +271,13 @@
     });
 </script>
 
+
 <script>
     var token = '{{ Session::token() }}';
     var url = '{{ route('edit') }}';
 </script>
+
+
 
 <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js" type="text/javascript"></script>
 

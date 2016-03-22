@@ -17,31 +17,69 @@ use App\Form;
 class FilePostController extends Controller
 {
 
+    /**
+     * Upload student list CSV file
+     *
+     * @param  $request
+     *
+     * @return redirect()
+     */
     public function postUploadFile(Request $request){
 
-        $file = $request->file('file_to_upload');
-        $filename = 'temp.csv';
+        //TODO: File validation, mime, extension etc.
 
+        //get file from request
+        $file = $request->file('file_to_upload');
+
+        $success = false;
+
+        $message = 'File upload failed';
+
+        //if no file is gotten do nothing
         if($file){
-            Storage::disk('local')->put($filename, File::get($file));
+            $filename = 'temp.csv'; //static file name, should overwrite existing file
+            $success = Storage::disk('local')->put($filename, File::get($file));
+        }else{
+            redirect()->back();
         }
 
-        $this->parseCsv();
+        if($success){
+            $this->parseCsv($this->getUploadFile('temp.csv'));
+        }
 
-        return redirect()->route('students');
+        return redirect()->route('students')->with(['message' => $message]);
     }
 
 
+
+    /**
+     * Get file from path
+     *
+     * @param  $filename
+     *
+     * @return string  path to file
+     */
     public function getUploadFile($filename){
         $file = Storage::disk('local')->getDriver()->getAdapter()->getPathPrefix();
         return $file."".$filename;
     }
 
 
-    public function parseCsv(){
 
-        $csv = Reader::createFromPath($this->getUploadFile('temp.csv'));
+
+    /**
+     * Parse CSV file
+     *
+     * @param  $filepath
+     *
+     * @return boolean  success
+     */
+    public function parseCsv($filepath){
+
+        $csv = Reader::createFromPath($filepath);
         $csv->setOffset(1); //because we don't want to insert the header
+
+        //TODO: First parse file into array for success then attempt database access
 
         $nbInsert = $csv->each(function ($row) {
 
@@ -64,8 +102,15 @@ class FilePostController extends Controller
     }
 
 
-    public function downloadZipArchive($formId){
 
+    /**
+     * Download zip folder containing
+     *
+     * @param  $formId
+     *
+     * @return response()
+     */
+    public function downloadZipArchive($formId){
 
 //        Storage::delete(storage_path('app/public/test.zip'));
 
@@ -80,9 +125,8 @@ class FilePostController extends Controller
         $downloadName = strval($form->title).''.$sFormId.'.zip';
         $downloadName = preg_replace('/\s+/', '', $downloadName);
 
-
         $zipper = new \Chumper\Zipper\Zipper;
-        $zipper->make(storage_path('app/public/test.zip'))->folder('test')->add($this->getUploadFile('f1') );
+        $zipper->make(storage_path('app/public/test.zip'))->folder('test')->add($this->getUploadFile($folderName) );
 
         return response()->download(storage_path('app/public/test.zip'));
     }
