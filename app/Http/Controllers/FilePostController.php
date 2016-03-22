@@ -80,6 +80,7 @@ class FilePostController extends Controller
         $downloadName = strval($form->title).''.$sFormId.'.zip';
         $downloadName = preg_replace('/\s+/', '', $downloadName);
 
+
         $zipper = new \Chumper\Zipper\Zipper;
         $zipper->make(storage_path('app/public/test.zip'))->folder('test')->add($this->getUploadFile('f1') );
 

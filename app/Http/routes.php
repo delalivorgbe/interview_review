@@ -71,7 +71,7 @@ Route::group(['middleware' => ['web']], function () {
     ]);
 
     Route::get('/dashboard', [
-        'uses' => 'StaffPagesController@getDashboard',
+        'uses' => 'StaffPagesController@getStudents',
         'as' => 'dashboard',
         'middleware' => ['auth','user.role','shield.from.students']
     ]);

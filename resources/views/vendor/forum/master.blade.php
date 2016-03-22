@@ -90,7 +90,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <ul class="sidebar-menu">
                     <li class="header"></li>
                     <!-- Optionally, you can add icons to the links -->
-                    <li><a href="{{ url('dashboard') }}"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
+                    {{--<li><a href="{{ url('dashboard') }}"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>--}}
                     <li><a href="{{ url('students') }}"><i class="fa fa-users"></i><span>Students</span></a></li>
                     <li><a href="{{ url('forms') }}"><i class="fa fa-file-text"></i><span>Document Request</span></a></li>
                     <li class="active"><a href="{{ url('forum') }}"><i class="fa fa-comment"></i><span>Forums</span></a></li>

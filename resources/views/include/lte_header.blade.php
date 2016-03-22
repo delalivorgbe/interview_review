@@ -20,44 +20,21 @@
                     <!-- Menu toggle button -->
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-bell-o"></i>
-                        <span class="label label-warning">10</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="header">You have 10 notifications</li>
+                        <li class="header">You have 0 notifications</li>
                         <li>
                             <!-- Inner Menu: contains the notifications -->
                             <ul class="menu">
-                                <li><!-- start notification -->
-                                    <a href="#">
-                                        <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                                    </a>
-                                </li><!-- end notification -->
+
                             </ul>
                         </li>
-                        <li class="footer"><a href="#">View all</a></li>
+                        <li class="footer"><a href="#"></a></li>
                     </ul>
                 </li>
 
-                <!-- User Account Menu -->
-                <li class="dropdown user user-menu">
-                    <!-- Menu Toggle Button -->
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <!-- The user image in the navbar-->
-                        <img src="{{ asset("/bower_components/admin-lte/dist/img/user2-160x160.jpg") }}" class="user-image" alt="User Image"/>
-                        <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                        <span class="hidden-xs">{{ Auth::user()->name}}</span>
-                    </a>
-                    <ul class="dropdown-menu">
+                <li><a  href="{{ route('logout') }}">Sign out</a></li>
 
-                        <!-- Menu Footer-->
-                        <li class="user-footer">
-
-                            <div class="pull-right">
-                                <a href="{{ route('logout') }}" class="btn btn-default btn-flat">Sign out</a>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
             </ul>
         </div>
     </nav>

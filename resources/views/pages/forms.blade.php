@@ -18,7 +18,7 @@
     <ul class="sidebar-menu">
         <li class="header"></li>
         <!-- Optionally, you can add icons to the links -->
-        <li><a href="{{ url('dashboard') }}"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
+        {{--<li><a href="{{ url('dashboard') }}"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>--}}
         <li><a href="{{ url('students') }}"><i class="fa fa-users"></i><span>Students</span></a></li>
         <li class="active"><a href="{{ url('forms') }}"><i class="fa fa-file-text"></i><span>Document Request</span></a></li>
         <li><a href="{{ url('forum') }}"><i class="fa fa-comment"></i><span>Forums</span></a></li>
@@ -94,9 +94,11 @@
                             <div class="form-group col-md-6" >
                                 <label for="file-format">Fle Format</label>
                                 <select class="form-control" name="file-format" id="file-format">
+                                    <option value="any">any</option>
+                                    <option value="image">image</option>
                                     <option value="pdf">pdf</option>
-                                    <option value="png">png</option>
-                                    <option value="jpg">jpg</option>
+                                    <option value="doc">doc</option>
+                                    <option value="spreadsheet">spreadsheet</option>
                                 </select>
                             </div>
 

@@ -22,7 +22,7 @@
             <!-- Sidebar Menu -->
     <ul class="sidebar-menu">
         <li class="header"></li>
-        <li><a href="{{ url('dashboard') }}"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
+        {{--<li><a href="{{ url('dashboard') }}"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>--}}
         <li class="active"><a href="{{ url('students') }}"><i class="fa fa-users"></i><span>Students</span></a></li>
         <li><a href="{{ url('forms') }}"><i class="fa fa-file-text"></i><span>Document Request</span></a></li>
         <li><a href="{{ url('forum') }}"><i class="fa fa-comment"></i><span>Forums</span></a></li>
@@ -56,10 +56,13 @@
                         </thead>
                         <tbody>
 
+                        <?php $count = 0;?>
+
                         @foreach($students as $student)
+                            <?php $count++;?>
 
                             <tr>
-                                <th scope="row">1</th>
+                                <th scope="row"><?php echo $count;?></th>
                                 <td>{{ $student->first_name  }}</td>
                                 <td>{{ $student->last_name  }}</td>
                                 <td>{{ $student->class  }}</td>
