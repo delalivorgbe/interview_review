@@ -21,7 +21,21 @@
                             <div class="container col-md-9">
                                 <h4><strong>Instructions</strong></h4>
                                 <p>{{ $form->description }}</p>
+
+
+                                 <span class="col-md-12">
+                                     <hr class="col-md-9"> <br>
+                                </span>
+
+                                <h5><strong>Deadline:<span  id="dead{{$form->id}}"> {{ $form->expiry_date }} </span> </strong></h5>
+
                             </div>
+
+
+
+
+
+
 
                             <div class="container col-md-3">
 
